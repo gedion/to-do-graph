@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "to-do-graph"
+version = "0.1.0"
+description = "langgraph based agent to manage todos"
+authors = ["gedion"]
+readme = "README.md"
+packages = [{ include = "to_do_graph", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0"  # Keep Python version fixed
+langgraph = "*"
+langchain-core = "*"
+langchain-community = "*"
+langchain-openai = "*"
+trustcall = "*"
+
+[tool.poetry.group.dev.dependencies]
+langgraph-cli = "^0.1.58"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
